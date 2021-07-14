@@ -111,6 +111,45 @@
         </div>
         <!-- END SECTION -->
 
+        <!-- SECTION form for jobs -->
+        <div class="row">
+            <div class="col mt-5">
+                <!-- car form -->
+                <form class="d-flex" onsubmit="app.jobsController.createJob()">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" class="form-control" placeholder="title..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" name="company" id="company" class="form-control" placeholder="company..."
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">education</label>
+                        <input type="number" name="education" id="education" class="form-control"
+                            placeholder="education..." required min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="salary">Salary</label>
+                        <input type="number" name="salary" id="salary" class="form-control" placeholder="salary..."
+                            required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description" class="form-control"
+                            placeholder="Description..." maxlength="240">
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button type="submit" class="btn btn-outline-success">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- template for houses -->
+        <div class="row" id="houses">
+        </div>
 
 
 
