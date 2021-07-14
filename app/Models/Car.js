@@ -6,7 +6,7 @@ export default class Car {
     this.make = make
     this.model = model
     this.year = year
-    this.price = price
+    this.price = price.toLocaleString("en-US")
     this.description = description || "no car description"
     this.imgUrl = imgUrl || '//placehold.it/200x200'
   }

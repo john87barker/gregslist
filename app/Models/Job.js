@@ -3,7 +3,7 @@ export default class Job {
     this.title = title
     this.company = company
     this.education = education
-    this.salary = salary
+    this.salary = salary.toLocaleString("en-US")
     this.description = description
   }
 

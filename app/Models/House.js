@@ -3,7 +3,7 @@ export default class House {
     this.bedrooms = bedrooms
     this.bath = bath
     this.sqft = sqft
-    this.price = price
+    this.price = price.toLocaleString("en-US")
     this.description = description || "No Description for the Home"
     this.imgUrl = imgUrl || '//placehold.it/200x200'
   }
