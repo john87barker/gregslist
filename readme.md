@@ -1,4 +1,4 @@
-gregslist
+gregslist-mvc
 ============
 
 ### Get Started

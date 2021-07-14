@@ -9,27 +9,69 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/style.css">
-    <title>gregslist</title>
+    <title>gregslist-mvc</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+        <nav class="navbar navbar-primary navbar-expand bg-dark text-white">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">gregslist</span>
+                <span class="ml-2">Gregslist</span>
             </a>
         </nav>
     </header>
     <main class="container">
-        <div id="app"></div>
+        <!-- SECTION -->
+        <div class="row">
+            <div class="col mt-5">
+                <!-- car form -->
+                <form class="d-flex" onsubmit="app.carsController.createCar()">
+                    <div class="form-group">
+                        <label for="make">Make</label>
+                        <input type="text" name="make" id="make" class="form-control" placeholder="Make..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" name="model" id="model" class="form-control" placeholder="Model..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="number" name="year" id="year" class="form-control" placeholder="Year..." required
+                            min="1950" max="2021">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="price" class="form-control" placeholder="Price..."
+                            required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="imgUrl">Image Url</label>
+                        <input type="text" name="imgUrl" id="imgUrl" class="form-control" placeholder="Url...">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description" class="form-control"
+                            placeholder="Description..." maxlength="240">
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button type="submit" class="btn btn-outline-success">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- template for cars -->
+        <div class="row" id="cars">
+        </div>
+        <!-- END SECTION -->
+
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">
             <p><small>Made with love by Codeworks</small></p>
         </div>
     </footer>
-
     <script src="app/main.js" type="module"></script>
 </body>
 
