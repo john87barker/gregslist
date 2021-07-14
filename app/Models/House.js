@@ -11,17 +11,17 @@ export default class House {
   get TemplateHouse() {
     return `
 <div class="col-md-3 col-sm-2 my-3">
-      <div class="car bg-light shadow">
-        <img src="${this.imgUrl}" class="w-100" alt="${this.bedrooms} ${this.bath} home image">
-        <div class="p-3">
-          <div class="text-center">
-            <p><b>${this.bedrooms} - ${this.bath} - ${this.sqft}</b></p>
-          </div>
-              <p>${this.description}</p>
-                <p><em>$${this.price}</em></p>
-          </div>
+  <div class="car bg-light shadow">
+    <img src="${this.imgUrl}" class="w-100" alt="${this.bedrooms} ${this.bath} home image">
+    <div class="p-3">
+      <div class="text-center">
+        <p><b>${this.bedrooms} - ${this.bath} - ${this.sqft}</b></p>
       </div>
-    </div>
+        <p>${this.description}</p>
+        <p><em>$${this.price}</em></p>
+      </div>
+  </div>
+</div>
   `
   }
 }
