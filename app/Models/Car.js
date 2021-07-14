@@ -19,7 +19,7 @@ export default class Car {
   //   this.imgUrl = data.imgUrl
   // }
 
-  get Template() {
+  get TemplateCar() {
     return `
     <div class="col-md-3 col-sm-2 my-3">
       <div class="car bg-light shadow">

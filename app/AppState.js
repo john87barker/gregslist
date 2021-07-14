@@ -1,4 +1,5 @@
 import Car from "./Models/Car.js"
+import House from "./Models/House.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -23,6 +24,28 @@ class AppState extends EventEmitter {
       imgUrl: 'https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/07/Gremlin-X.jpg'
     })
   ]
+  /**@type {House[]} */
+  houses = [
+    new House({
+      bedrooms: 4,
+      bath: 3,
+      sqft: 1873,
+      price: 650000,
+      description: 'Beautiful home for a medium sized family!',
+      imgUrl: ''
+    }),
+    new House({
+      bedrooms: 3,
+      bath: 1.5,
+      sqft: 1073,
+      price: 100000,
+      description: 'Beautiful home for a small family!',
+      imgUrl: ''
+    })
+
+
+  ]
+
 
 }
 
