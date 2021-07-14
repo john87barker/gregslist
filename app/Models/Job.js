@@ -13,10 +13,10 @@ export default class Job {
   <div class="car bg-light shadow">
     <div class="p-3">
       <div class="text-center">
-        <p><b>${this.title} - ${this.company} - ${this.sqft}</b></p>
+        <p><b>${this.title} - ${this.company} - $${this.salary} </b></p>
       </div>
         <p>${this.description}</p>
-        <p><em>$${this.salary}</em></p>
+        <p><em>${this.education}</em></p>
     </div>
   </div>
 </div>
