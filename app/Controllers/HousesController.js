@@ -25,7 +25,7 @@ export default class HousesController {
       sqft: form.sqft.value,
       price: form.price.value,
       price: form.price.value,
-      imgUrl: form.imgUrl.value,
+      imgUrl: form.imgUrl.value
     }
     housesService.createHouse(rawHouse)
     form.reset()

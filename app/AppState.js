@@ -39,7 +39,7 @@ class AppState extends EventEmitter {
       bath: 1.5,
       sqft: 1073,
       price: 100000,
-      description: 'Beautiful home for a small family!',
+      description: 'Great home for a small family!',
       imgUrl: ''
     })
 
