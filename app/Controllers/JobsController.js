@@ -12,9 +12,10 @@ function _draw() {
 export default class JobsController {
   constructor() {
     ProxyState.on('jobs', _draw)
-    ProxyState.on('jobs', () => { console.log('new job') })
-
-    _draw
+    ProxyState.on('jobs', () => {
+      console.log('new job')
+    })
+    _draw()
   }
   createJob() {
     event.preventDefault()
@@ -24,9 +25,9 @@ export default class JobsController {
       company: form.company.value,
       education: form.education.value,
       salary: form.salary.value,
-      description: form.description.value,
+      description: form.description.value
     }
     jobsService.createJob(rawJob)
-    form.reset
+    form.reset()
   }
 }
