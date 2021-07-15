@@ -15,7 +15,8 @@ export default class House {
     <img src="${this.imgUrl}" class="w-100" alt="${this.bedrooms}  ${this.bath} home image">
     <div class="p-3">
       <div class="text-center">
-        <p><b>${this.bedrooms} bedroom - ${this.bath} bath - ${this.sqft} sqft </b></p>
+        <p><b>${this.bedrooms} bedroom - ${this.bath} bath </b></p> 
+        <p>${this.sqft} sqft</p>
       </div>
         <p>${this.description}</p>
         <p><em>$${this.price}</em></p>
