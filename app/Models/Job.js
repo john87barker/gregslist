@@ -10,7 +10,7 @@ export default class Job {
   get TemplateJob() {
     return `
 <div class="col-md-3 col-sm-2 my-3">
-  <div class="car bg-light shadow">
+  <div class="car bg-light shadow rounded-bottom">
     <div class="p-3">
       <div class="text-center">
         <p><b>${this.title} - ${this.company} - $${this.salary} </b></p>

@@ -22,7 +22,7 @@ export default class Car {
   get TemplateCar() {
     return `
     <div class="col-md-3 col-sm-2 my-3">
-      <div class="car bg-light shadow">
+      <div class="car bg-light shadow rounded-bottom">
           <img src="${this.imgUrl}" class="w-100" alt="${this.make} ${this.model} car image">
           <div class="p-3">
               <div class="text-center">
