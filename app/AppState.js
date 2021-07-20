@@ -11,15 +11,7 @@ class AppState extends EventEmitter {
   /**@type {House[]} */
   houses = []
   /**@type {Job[]} */
-  jobs = [
-    new Job({
-      title: 'Salesman',
-      company: '#1 Car Dealer',
-      education: 'High School Graduate or Equivelent',
-      salary: 45000,
-      description: 'Best dealership in the area!'
-    })
-  ]
+  jobs = []
 }
 
 

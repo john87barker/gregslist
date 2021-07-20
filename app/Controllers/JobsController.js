@@ -17,17 +17,30 @@ export default class JobsController {
     })
     _draw()
   }
-  createJob() {
-    event.preventDefault()
-    let form = event.target
-    let rawJob = {
-      title: form.title.value,
-      company: form.company.value,
-      education: form.education.value,
-      salary: form.salary.value,
-      description: form.description.value
+  
+  
+  async createJob() {
+    try {
+      event.preventDefault()
+      let form = event.target
+      let rawJob = {
+        jobTitle: form.jobTitle.value,
+        company: form.company.value,
+        rate: form.rate.value,
+        hours: form.hours.value,
+        description: form.description.value
+      }
+      await jobsService.createJob(rawJob)
+      form.reset()
+      
+    } catch (error) {
+      console.error(error)
+      window.alert(error.message)
     }
-    jobsService.createJob(rawJob)
-    form.reset()
   }
+  deleteJob(jobId) {
+    console.log('Deleting job number', jobId)
+    jobsService.deleteJob(jobId)
+  }
+
 }
