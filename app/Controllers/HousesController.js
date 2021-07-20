@@ -8,7 +8,7 @@ function _draw() {
   })
   document.getElementById('houses').innerHTML = template
 }
-
+  
 export default class HousesController {
   constructor() {
     ProxyState.on('houses', _draw)
@@ -17,18 +17,37 @@ export default class HousesController {
     })
     _draw()
   }
-  createHouse() {
-    event.preventDefault()
-    let form = event.target
-    let rawHouse = {
-      bedrooms: form.bedrooms.value,
-      bath: form.bath.value,
-      sqft: form.sqft.value,
-      price: form.price.value,
-      price: form.price.value,
-      imgUrl: form.imgUrl.value
+
+
+  async createHouse() {
+    try {
+      event.preventDefault()
+      let form = event.target
+      let rawHouse = {
+        bedrooms: form.bedrooms.value,
+        bathrooms: form.bathrooms.value,
+        year: form.year.value,
+        price: form.price.value,
+        imgUrl: form.imgUrl.value,
+        levels: form.levels.value,
+        description: form.description.value
+      }
+      await housesService.createHouse(rawHouse)
+      form.reset()
+    } catch (error) {
+      console.error(error)
+      window.alert(error.message)
     }
-    housesService.createHouse(rawHouse)
-    form.reset()
+  }
+
+
+  deleteHouse(houseId) {
+    console.log('You are trying to delete house number', houseId)
+    housesService.deleteHouse(houseId)
+    }
+
+  bidHouse(houseId) {
+    console.log('You are going to put more money on this silly house', houseId)
+    housesService.bidHouse(houseId)
   }
 }

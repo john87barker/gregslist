@@ -49,7 +49,7 @@ class CarsService {
     } catch (error) {
       console.error(error)
   }
-}
+ }
 }
 
 
