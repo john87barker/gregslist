@@ -11,7 +11,7 @@ export default class House {
   get TemplateHouse() {
     return `
 <div class="col-md-3 col-sm-2 my-3 ">
-  <div class="car bg-light shadow rounded-bottom">
+  <div class="card bg-light shadow rounded-bottom text-dark">
     <img src="${this.imgUrl}" class="w-100" alt="${this.bedrooms}  ${this.bath} home image">
     <div class="p-3">
       <div class="text-center">
