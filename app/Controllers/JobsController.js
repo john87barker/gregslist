@@ -23,6 +23,7 @@ export default class JobsController {
     try {
       event.preventDefault()
       let form = event.target
+      
       let rawJob = {
         jobTitle: form.jobTitle.value,
         company: form.company.value,
